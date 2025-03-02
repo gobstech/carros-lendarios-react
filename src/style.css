@@ -17,6 +17,7 @@ html {
 
 body {
   margin: 1.5rem;
+  height: 100vh;
 }
 
 body,
@@ -108,5 +109,28 @@ hr {
 
 img {
   max-width: 100%;
-  width: 400px;
+}
+
+p {
+  text-align: justify;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.foto,
+.descricao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: auto;
+  }
 }

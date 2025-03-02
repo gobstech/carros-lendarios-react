@@ -24,13 +24,6 @@ function App() {
   return (
     <>
       <Titulo title="Carros lendários do Brasil" />
-
-      <h2>{carro.titulo}</h2>
-
-      <img src={carro.imagem} alt={carro.titulo} />
-
-      <p>{carro.descricao}</p>
-
       <button onClick={voltar} disabled={index == 0 ? true : false}>
         Voltar
       </button>
@@ -40,6 +33,16 @@ function App() {
       >
         Avançar
       </button>
+
+      <h2>{carro.titulo}</h2>
+      <div className="grid">
+        <div className="foto">
+          <img src={carro.imagem} alt={carro.titulo} />
+        </div>
+        <div className="descricao">
+          <p>{carro.descricao}</p>
+        </div>
+      </div>
     </>
   );
 }
